@@ -27,8 +27,7 @@ jobs:
 
       - name: Cài đặt thư viện, Build và Upload thư mục web
         uses: withastro/action@v3
-        with:
-          # Giữ mặc định: Node version 20+, tự động quét package-lock.json để dùng npm
+        # Giữ mặc định: Node version 20+, tự động quét package-lock.json để dùng npm
 
   deploy:
     needs: build
