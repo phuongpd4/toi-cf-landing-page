@@ -1,0 +1,42 @@
+name: Deploy to GitHub Pages
+
+on:
+  # Kích hoạt workflow mỗi khi push code lên nhánh "main"
+  push:
+    branches: [ main ]
+  # Cho phép kích hoạt thủ công từ tab Actions
+  workflow_dispatch:
+
+# Cấp quyền đọc repo và ghi lên GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Tránh việc chạy song song gây lỗi nếu push liên tục nhiều commit
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Lấy mã nguồn (Checkout)
+        uses: actions/checkout@v4
+
+      - name: Cài đặt thư viện, Build và Upload thư mục web
+        uses: withastro/action@v3
+        with:
+          # Giữ mặc định: Node version 20+, tự động quét package-lock.json để dùng npm
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Triển khai lên GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

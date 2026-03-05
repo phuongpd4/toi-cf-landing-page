@@ -1,0 +1,16 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header';
+import About from '../components/sections/About';
+import Footer from '../components/Footer';
+---
+
+<Layout title="Về Chúng Tôi — T.O.I Coffee" description="Khám phá câu chuyện đằng sau T.O.I Coffee — nơi đam mê gặp sự hoàn hảo.">
+  <Header client:load />
+  <main>
+    <!-- Spacer for fixed header -->
+    <div class="h-20"></div>
+    <About client:visible />
+  </main>
+  <Footer client:visible />
+</Layout>

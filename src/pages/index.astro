@@ -1,0 +1,18 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header';
+import Hero from '../components/sections/Hero';
+import MenuSection from '../components/sections/Menu';
+import Testimonials from '../components/sections/Testimonials';
+import Footer from '../components/Footer';
+---
+
+<Layout>
+  <Header client:load />
+  <main>
+    <Hero client:load />
+    <MenuSection client:visible />
+    <Testimonials client:visible />
+  </main>
+  <Footer client:visible />
+</Layout>
