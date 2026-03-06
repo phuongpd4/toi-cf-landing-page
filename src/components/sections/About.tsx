@@ -31,7 +31,7 @@ export default function About() {
                     <div className="relative">
                         <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                             <img
-                                src={`${import.meta.env.BASE_URL}images/about-shop.png`}
+                                src={`${import.meta.env.BASE_URL}/images/about-shop.png`}
                                 alt="T.O.I Coffee shop interior"
                                 className="w-full h-[500px] object-cover"
                             />

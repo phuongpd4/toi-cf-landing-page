@@ -2,11 +2,11 @@ import { useState } from 'react';
 import { Coffee, Menu, X } from 'lucide-react';
 
 const navLinks = [
-    { label: 'Home', href: import.meta.env.BASE_URL },
-    { label: 'About', href: `${import.meta.env.BASE_URL}about` },
-    { label: 'Menu', href: `${import.meta.env.BASE_URL}#menu` },
-    { label: 'Testimonials', href: `${import.meta.env.BASE_URL}#testimonials` },
-    { label: 'Contact', href: `${import.meta.env.BASE_URL}contact` },
+    { label: 'Home', href: `${import.meta.env.BASE_URL}/` },
+    { label: 'About', href: `${import.meta.env.BASE_URL}/about` },
+    { label: 'Menu', href: `${import.meta.env.BASE_URL}/#menu` },
+    { label: 'Testimonials', href: `${import.meta.env.BASE_URL}/#testimonials` },
+    { label: 'Contact', href: `${import.meta.env.BASE_URL}/contact` },
 ];
 
 export default function Header() {
@@ -19,7 +19,7 @@ export default function Header() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between">
                     {/* Logo */}
-                    <a href={import.meta.env.BASE_URL} className="flex items-center gap-2 group">
+                    <a href={`${import.meta.env.BASE_URL}/`} className="flex items-center gap-2 group">
                         <div className="relative">
                             <Coffee
                                 className="w-8 h-8 text-gold group-hover:text-gold-light transition-colors duration-300"
@@ -44,7 +44,7 @@ export default function Header() {
                             </a>
                         ))}
                         <a
-                            href={`${import.meta.env.BASE_URL}contact`}
+                            href={`${import.meta.env.BASE_URL}/contact`}
                             className="ml-2 px-5 xl:px-6 py-2 xl:py-2.5 bg-gold text-espresso text-sm font-semibold rounded-full hover:bg-gold-light transition-all duration-300 hover:shadow-lg hover:shadow-gold/25 hover:scale-105 active:scale-95"
                         >
                             Visit Us
@@ -108,7 +108,7 @@ export default function Header() {
 
                     <div className="mt-8 pt-6 border-t border-white/5 pb-8">
                         <a
-                            href={`${import.meta.env.BASE_URL}contact`}
+                            href={`${import.meta.env.BASE_URL}/contact`}
                             onClick={() => setIsMobileMenuOpen(false)}
                             className="flex items-center justify-center w-full px-8 py-3.5 bg-gold text-espresso text-lg font-semibold rounded-full hover:bg-gold-light transition-all duration-300"
                         >

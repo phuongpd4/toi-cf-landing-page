@@ -9,7 +9,7 @@ export default function Hero() {
             {/* Background Image */}
             <div className="absolute inset-0">
                 <img
-                    src={`${import.meta.env.BASE_URL}images/hero-bg.png`}
+                    src={`${import.meta.env.BASE_URL}/images/hero-bg.png`}
                     alt="T.O.I Coffee atmosphere"
                     className="w-full h-full object-cover"
                 />
@@ -65,13 +65,13 @@ export default function Hero() {
                     style={{ animationDelay: '0.4s' }}
                 >
                     <a
-                        href={`${import.meta.env.BASE_URL}#menu`}
+                        href={`${import.meta.env.BASE_URL}/#menu`}
                         className="group px-8 py-4 bg-gold text-espresso font-semibold rounded-full text-lg hover:bg-gold-light transition-all duration-300 hover:shadow-xl hover:shadow-gold/30 hover:scale-105 active:scale-95"
                     >
                         Explore Our Menu
                     </a>
                     <a
-                        href={`${import.meta.env.BASE_URL}about`}
+                        href={`${import.meta.env.BASE_URL}/about`}
                         className="group px-8 py-4 border-2 border-cream/30 text-cream font-medium rounded-full text-lg hover:border-gold hover:text-gold transition-all duration-300 hover:scale-105 backdrop-blur-sm"
                     >
                         Our Story
@@ -81,7 +81,7 @@ export default function Hero() {
 
             {/* Scroll Indicator */}
             <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-                <a href={`${import.meta.env.BASE_URL}about`} className="flex flex-col items-center gap-2 text-cream/50 hover:text-gold transition-colors">
+                <a href={`${import.meta.env.BASE_URL}/about`} className="flex flex-col items-center gap-2 text-cream/50 hover:text-gold transition-colors">
                     <span className="text-xs tracking-widest uppercase">Discover</span>
                     <ArrowDown className="w-5 h-5" />
                 </a>
