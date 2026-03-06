@@ -1,15 +1,18 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Header from '../components/Header';
-import Contact from '../components/sections/Contact';
-import Footer from '../components/Footer';
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header";
+import ContactSection from "../components/sections/Contact";
+import Footer from "../components/Footer";
 ---
 
-<Layout title="Liên Hệ — T.O.I Coffee" description="Đến thăm T.O.I Coffee hoặc liên hệ với chúng tôi. Chúng tôi luôn sẵn sàng trò chuyện về cà phê.">
+<Layout
+  title="Liên Hệ — T.O.I Coffee"
+  description="Đến thăm T.O.I Coffee hoặc liên hệ với chúng tôi. Chúng tôi luôn sẵn sàng trò chuyện về cà phê."
+>
   <Header client:load />
   <main>
     <div class="h-20"></div>
-    <Contact client:visible />
+    <ContactSection client:visible />
   </main>
   <Footer client:visible />
 </Layout>

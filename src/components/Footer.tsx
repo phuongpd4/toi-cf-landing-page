@@ -2,11 +2,11 @@ import { Coffee, Instagram, Facebook, Twitter, Heart } from 'lucide-react';
 
 const footerLinks = {
     explore: [
-        { label: 'Home', href: '/' },
-        { label: 'About', href: '/about' },
-        { label: 'Menu', href: '/#menu' },
-        { label: 'Reviews', href: '/#testimonials' },
-        { label: 'Contact', href: '/contact' },
+        { label: 'Home', href: import.meta.env.BASE_URL },
+        { label: 'About', href: `${import.meta.env.BASE_URL}about` },
+        { label: 'Menu', href: `${import.meta.env.BASE_URL}#menu` },
+        { label: 'Reviews', href: `${import.meta.env.BASE_URL}#testimonials` },
+        { label: 'Contact', href: `${import.meta.env.BASE_URL}contact` },
     ],
     hours: [
         'Mon – Fri: 7:00 AM – 9:00 PM',
@@ -29,7 +29,7 @@ export default function Footer() {
                 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
                     {/* Brand */}
                     <div className="lg:col-span-1">
-                        <a href="/" className="flex items-center gap-2 mb-5">
+                        <a href={import.meta.env.BASE_URL} className="flex items-center gap-2 mb-5">
                             <Coffee className="w-7 h-7 text-gold" />
                             <span className="font-heading text-2xl font-bold text-cream">
                                 T.O.I <span className="text-gold text-lg font-normal">Coffee</span>

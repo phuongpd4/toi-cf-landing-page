@@ -15,7 +15,7 @@ const menuItems: MenuItem[] = [
         name: 'Cà Phê Sữa Đá',
         description: 'Traditional Vietnamese iced coffee with condensed milk. Bold, sweet, and refreshing.',
         price: '45.000₫',
-        image: '/images/coffee-vietnamese.png',
+        image: `${import.meta.env.BASE_URL}images/coffee-vietnamese.png`,
         badge: 'Signature',
         category: 'Signature',
     },
@@ -23,14 +23,14 @@ const menuItems: MenuItem[] = [
         name: 'Caramel Latte',
         description: 'Silky espresso with steamed milk and house-made caramel, topped with latte art.',
         price: '55.000₫',
-        image: '/images/coffee-latte.png',
+        image: `${import.meta.env.BASE_URL}images/coffee-latte.png`,
         category: 'Classic',
     },
     {
         name: 'Double Espresso',
         description: 'Rich, concentrated shots pulled from our premium Da Lat beans. Pure intensity.',
         price: '35.000₫',
-        image: '/images/coffee-espresso.png',
+        image: `${import.meta.env.BASE_URL}images/coffee-espresso.png`,
         badge: 'Popular',
         category: 'Classic',
     },
@@ -38,7 +38,7 @@ const menuItems: MenuItem[] = [
         name: 'Cold Brew',
         description: 'Smooth, slow-steeped for 18 hours. Delicate flavors with zero bitterness.',
         price: '50.000₫',
-        image: '/images/coffee-coldbrew.png',
+        image: `${import.meta.env.BASE_URL}images/coffee-coldbrew.png`,
         badge: 'New',
         category: 'Cold',
     },
@@ -90,8 +90,8 @@ export default function MenuSection() {
                             key={cat}
                             onClick={() => setActiveCategory(cat)}
                             className={`px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${activeCategory === cat
-                                    ? 'bg-gold text-espresso shadow-md shadow-gold/25'
-                                    : 'bg-white text-brown border border-caramel/20 hover:border-gold hover:text-gold-dark'
+                                ? 'bg-gold text-espresso shadow-md shadow-gold/25'
+                                : 'bg-white text-brown border border-caramel/20 hover:border-gold hover:text-gold-dark'
                                 }`}
                         >
                             {cat}
